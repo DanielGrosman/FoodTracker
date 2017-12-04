@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GZS-cp-HIF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ojt-xF-4fF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -141,6 +142,56 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1098" y="134"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="zMy-QW-vJv">
+            <objects>
+                <viewController id="ojt-xF-4fF" customClass="SignUpViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mDw-9D-TeP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHO-DI-mQm">
+                                <rect key="frame" x="16" y="146" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSp-L8-Q5X">
+                                <rect key="frame" x="16" y="225" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fic-HZ-3Cd">
+                                <rect key="frame" x="160" y="326" width="55" height="30"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="ojt-xF-4fF" eventType="touchUpInside" id="Uiu-RA-WnR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SHO-DI-mQm" firstAttribute="trailing" secondItem="ZSp-L8-Q5X" secondAttribute="trailing" id="2wp-G6-vlq"/>
+                            <constraint firstItem="ZSp-L8-Q5X" firstAttribute="centerX" secondItem="Fic-HZ-3Cd" secondAttribute="centerX" id="E38-GD-BEa"/>
+                            <constraint firstItem="SHO-DI-mQm" firstAttribute="trailing" secondItem="mDw-9D-TeP" secondAttribute="trailingMargin" id="GBJ-Wj-Un4"/>
+                            <constraint firstItem="Fic-HZ-3Cd" firstAttribute="top" secondItem="ZSp-L8-Q5X" secondAttribute="bottom" constant="71" id="RyV-1m-gYV"/>
+                            <constraint firstItem="ZSp-L8-Q5X" firstAttribute="top" secondItem="SHO-DI-mQm" secondAttribute="bottom" constant="49" id="hsM-fR-4uc"/>
+                            <constraint firstItem="SHO-DI-mQm" firstAttribute="leading" secondItem="ZSp-L8-Q5X" secondAttribute="leading" id="oJJ-qT-SXx"/>
+                            <constraint firstItem="SHO-DI-mQm" firstAttribute="leading" secondItem="mDw-9D-TeP" secondAttribute="leadingMargin" id="pDZ-W5-7Oo"/>
+                            <constraint firstItem="SHO-DI-mQm" firstAttribute="top" secondItem="5a3-xL-RUc" secondAttribute="top" constant="126" id="xUs-hK-e7k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5a3-xL-RUc"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="ZSp-L8-Q5X" id="Ayh-xD-hDd"/>
+                        <outlet property="usernameTextField" destination="SHO-DI-mQm" id="wJd-Ga-EtW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mY-oD-0Wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1791" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="deQ-YL-9IT">
