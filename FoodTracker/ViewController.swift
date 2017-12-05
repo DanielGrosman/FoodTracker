@@ -17,7 +17,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    
+    @IBOutlet weak var detailsTextField: UITextField!
+    @IBOutlet weak var caloriesTextField: UITextField!
     var meal: Meal?
     
     override func viewDidLoad() {
@@ -29,6 +30,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             nameTextField.text   = meal.name
             photoImageView.image = meal.photo
             ratingControl.rating = meal.rating
+            detailsTextField.text = meal.itemDescription
+            caloriesTextField.text = meal.calories
         }
         updateSaveButtonState()
     }
@@ -82,11 +85,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
+        
         let name = nameTextField.text ?? ""
         let photo = photoImageView.image
         let rating = ratingControl.rating
+        let itemDescription = detailsTextField.text
+        let calories = caloriesTextField.text
         
-        meal = Meal(name: name, photo: photo, rating: rating)
+        meal = Meal(name: name, photo: photo, rating: rating, itemDescription: itemDescription!, calories: calories!)!
     }
     
     //MARK: Actions

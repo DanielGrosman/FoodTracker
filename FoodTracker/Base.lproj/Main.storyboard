@@ -105,11 +105,29 @@
                                     <constraint firstAttribute="trailing" secondItem="Jx6-7r-HNr" secondAttribute="trailing" id="gyl-ov-MAn"/>
                                 </constraints>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6h-UX-fvl">
+                                <rect key="frame" x="16" y="552" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Calories" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nq1-iP-jqZ">
+                                <rect key="frame" x="16" y="601" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="b6h-UX-fvl" firstAttribute="top" secondItem="IU8-9A-Dpp" secondAttribute="bottom" constant="19" id="17q-SE-UPj"/>
+                            <constraint firstItem="nq1-iP-jqZ" firstAttribute="top" secondItem="b6h-UX-fvl" secondAttribute="bottom" constant="19" id="8CD-k4-qyB"/>
+                            <constraint firstItem="b6h-UX-fvl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T5L-K5-BcJ"/>
+                            <constraint firstItem="b6h-UX-fvl" firstAttribute="trailing" secondItem="nq1-iP-jqZ" secondAttribute="trailing" id="Tn1-ec-afI"/>
                             <constraint firstItem="IU8-9A-Dpp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Tp6-NZ-vzg"/>
+                            <constraint firstItem="b6h-UX-fvl" firstAttribute="leading" secondItem="nq1-iP-jqZ" secondAttribute="leading" id="VtR-8a-6qg"/>
                             <constraint firstItem="IU8-9A-Dpp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Wcj-Qj-Twm"/>
+                            <constraint firstItem="b6h-UX-fvl" firstAttribute="centerX" secondItem="IU8-9A-Dpp" secondAttribute="centerX" id="cHF-WD-sNM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IU8-9A-Dpp" secondAttribute="trailing" constant="8" id="peL-zb-0NP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -127,6 +145,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="caloriesTextField" destination="nq1-iP-jqZ" id="8rT-FK-QWe"/>
+                        <outlet property="detailsTextField" destination="b6h-UX-fvl" id="9SP-mu-lIe"/>
                         <outlet property="nameTextField" destination="Jx6-7r-HNr" id="Ufl-2T-Ek2"/>
                         <outlet property="photoImageView" destination="s8O-8W-XSj" id="t70-h4-p8t"/>
                         <outlet property="ratingControl" destination="yxf-Kk-N3K" id="zfS-ab-zno"/>
@@ -141,7 +161,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1098" y="134"/>
+            <point key="canvasLocation" x="1096.8" y="133.5832083958021"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="zMy-QW-vJv">
@@ -168,6 +188,7 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUp:" destination="ojt-xF-4fF" eventType="touchUpInside" id="Uiu-RA-WnR"/>
+                                    <segue destination="GZS-cp-HIF" kind="show" id="Jvw-m7-pG7"/>
                                 </connections>
                             </button>
                         </subviews>
